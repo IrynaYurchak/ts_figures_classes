@@ -15,11 +15,11 @@ export class Triangle implements Figure {
     public c: number,
   ) {
     if (a <= 0 || b <= 0 || c <= 0) {
-      throw new Error('Invalid triangle side.');
+      throw new Error('The sides of a triangle cannot be negative numbers');
     }
 
     if (a + b <= c || a + c <= b || b + c <= a) {
-      throw new Error('Invalid triangle sides.');
+      throw new Error('sum of any two sides must be greater than the third');
     }
   }
 
@@ -43,7 +43,7 @@ export class Circle implements Figure {
     public radius: number,
   ) {
     if (radius <= 0) {
-      throw new Error('Invalid radius.');
+      throw new Error('Radius cannot be a negative number');
     }
   }
 
@@ -62,7 +62,7 @@ export class Rectangle implements Figure {
     public height: number,
   ) {
     if (width <= 0 || height <= 0) {
-      throw new Error('Invalid rectangle sides.');
+      throw new Error('The sides of a rectangle cannot be negative numbers');
     }
   }
 
